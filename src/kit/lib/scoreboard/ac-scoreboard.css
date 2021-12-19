@@ -1,0 +1,95 @@
+.card {
+    padding: 10px 10px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+
+    box-sizing: border-box;
+    background-color: #fff;
+    color: #666;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .08);
+    position: relative;
+    transition: box-shadow .1s ease-in-out;
+}
+
+p {
+    font-size: 1.25rem;
+    margin: 0;
+    color: #333;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+
+p.head-num {
+    width: 70px;
+    flex-shrink: 0;
+}
+
+p.head-cat {
+    overflow-y: hidden;
+    overflow: auto;
+    white-space: nowrap;
+    font-weight: 350;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.head-cat::-webkit-scrollbar {
+    display: none;
+}
+
+p.head-time {
+    width: 70px;
+    text-align: right;
+    flex-shrink: 0;
+}
+
+.body-container {
+    flex: 1;
+    margin-top: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.bdy-contestant-container {
+    display: flex;
+    flex-grow: 1;
+}
+
+.bdy-contestant {
+    margin: auto;
+    max-height: 2.6em;
+    overflow-x: hidden;
+    overflow: auto;
+    font-size: 2.25rem;
+    font-weight: 350;
+    line-height: 1.25em;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.bdy-contestant::-webkit-scrollbar {
+    display: none;
+}
+
+.bdy-score {
+    margin-top: 20px;
+    font-size: 3.5rem !important;
+    line-height: 1.2;
+    font-weight: 400;
+    flex-grow: 0;
+}
+
+.bdy-score-total {
+    font-size: 1.25rem !important;
+    flex-grow: 0;
+    margin-bottom: 5px;
+}

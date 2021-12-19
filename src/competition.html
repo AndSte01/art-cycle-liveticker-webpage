@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Scoreboards</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.7.6/dist/css/uikit.min.css" />
+</head>
+
+<body onload="init();">
+    <div
+        uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; cls-inactive: uk-navbar-transparent">
+        <nav class="uk-navbar-container" uk-navbar>
+            <div class="uk-navbar-left uk-margin-left">
+                <ul class="uk-navbar-nav">
+                    <li>
+                        <a href="/" uk-icon="icon: arrow-left"></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="uk-navbar-item">Wettkampf Name</div>
+            <div class="uk-navbar-right uk-margin-right">
+                <ul class="uk-navbar-nav">
+                    <li>
+                        <a href="/about.html" uk-icon="icon: info"></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <div class="uk-container">
+
+        <div id="scoreboards" class="uk-flex uk-flex-center uk-flex-left@l uk-flex-wrap" uk-margin>
+
+            <div class="uk-width-large uk-margin-small-left uk-margin-small-right">
+                <ac-scoreboard num="120" cat="2er offene Klasse" time="15:42"
+                    name="Alexander Scherer / Kirstin Wannemaker" pt_tot="153,00" pt_now="120,56" id="sb-1">
+                </ac-scoreboard>
+            </div>
+
+            <div class="uk-width-large uk-margin-small-left uk-margin-small-right">
+                <ac-scoreboard num="130" cat="1er Männer" time="15:42" name="Alexander Scherer" pt_tot="153,00"
+                    pt_now="120,56" id="sb-2"></ac-scoreboard>
+            </div>
+
+        </div>
+
+        <div id="results" class="uk-margin-large-top">
+            <ul uk-accordion="multiple: true">
+                <li class="uk-open">
+                    <a class="uk-accordion-title">Category 1<span
+                            class="uk-label uk-margin-small-left">ongoing</span></a>
+                    <div class="uk-accordion-content">
+                        <table class="uk-table uk-table-small uk-table-hover">
+                            <thead>
+                                <tr>
+                                    <th class="uk-width-small">Startnr.</th>
+                                    <th class="uk-table-expand">Starter</th>
+                                    <th class="uk-width-small uk-visible@m">Aufg.</th>
+                                    <th class="uk-width-small">Ausg.</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>101</td>
+                                    <td>Starter 1</td>
+                                    <td class="uk-visible@m">54,25</td>
+                                    <td>32,40</td>
+                                </tr>
+                                <tr>
+                                    <td>102</td>
+                                    <td>Starter 2</td>
+                                    <td class="uk-visible@m">104,00</td>
+                                    <td>
+                                        <span class="uk-badge uk-background-secondary">...</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>103</td>
+                                    <td>Starter 3</td>
+                                    <td class="uk-visible@m">198,60</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </li>
+                <li>
+                    <a class="uk-accordion-title">Category 2</a>
+                    <div class="uk-accordion-content">
+                        <p>2</p>
+                    </div>
+                </li>
+                <li>
+                    <a class="uk-accordion-title" href="#">Item 3</a>
+                    <div class="uk-accordion-content">
+                        <p>3</p>
+                        <p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="uk-position-bottom-right uk-text-secondary">
+            <a href="/impressum.html" class="uk-text-secondary">Impressum</a> | © Andreas Steger, 2021 | <a
+                href="https://github.com/AndSte01/art-cycle-liveticker-webpage">$git_version$</a>
+        </div>
+
+    </div>
+
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.8.0/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.8.0/dist/js/uikit-icons.min.js"></script>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- sprintf -->
+    <script src="kit/lib/sprintf/sprintf.min.js"></script>
+
+    <!-- i18n -->
+    <script src="kit/lib/i18n/i18n.js"></script>
+
+    <!-- loglevel -->
+    <script src="kit/lib/loglevel/loglevel.min.js"></script>
+
+    <!-- Icons by css.gg -->
+    <!-- <link href='https://cdn.jsdelivr.net/npm/css.gg/icons/all.css' rel='stylesheet'> -->
+
+    <!-- Scoreboards -->
+    <script src="kit/lib/scoreboard/ac-scoreboard.js"></script>
+
+    <!-- Site specific scripts -->
+    <script src="kit/js/i18n_init.js"></script>
+    <script src="kit/js/overview.js"></script>
+</body>
+
+</html>

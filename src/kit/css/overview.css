@@ -1,0 +1,30 @@
+.competition_container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+
+.competition_name {
+    margin-bottom: 5px !important;
+    text-decoration: none !important;
+}
+
+div.overflow {
+    white-space: nowrap;
+    overflow: hidden;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.overflow-y {
+    overflow-y: hidden;
+    overflow: auto;
+    white-space: nowrap;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.overflow-y::-webkit-scrollbar {
+    display: none;
+}
