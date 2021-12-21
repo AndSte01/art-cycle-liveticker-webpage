@@ -15,7 +15,7 @@ function competition_element(name, location, date, isLive, id) {
     competition_container.appendChild(overflow);
 
     a = document.createElement("a");
-    a.setAttribute("style", "text-decoration: none !important;")
+    a.setAttribute("style", "text-decoration: none;")
     a.setAttribute("href", "/competition.html?id=" + id);
     overflow.appendChild(a);
 
