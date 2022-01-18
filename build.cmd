@@ -9,7 +9,8 @@ robocopy src\ dist\  *.html /mir /xc > nul
 echo.
 echo setting html variables
 :: get fart from https://sourceforge.net/projects/fart-it/
-tools\fart.exe .\dist\ "$git_version$" "github"
+tools\fart.exe .\dist\ "$var_git_version$" "github"
+tools\fart.exe .\dist\ "$var_current_year$" "2021"
 
 :: Copying js
 echo.
@@ -24,7 +25,7 @@ robocopy src\kit\lib\ dist\kit\lib\ /mir /xc > nul
 :: Setting up libs
 echo.
 echo setting up libs
-tools\fart.exe .\dist\kit\lib\scoreboard\ac-scoreboard.js "$ac_scoreboard_location$" " /kit/lib/scoreboard"
+tools\fart.exe .\dist\kit\lib\scoreboard\ac-scoreboard.js "$var_ac_scoreboard_location$" " /kit/lib/scoreboard"
 
 :: Copying img
 echo.

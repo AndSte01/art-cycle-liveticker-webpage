@@ -17,7 +17,7 @@ class AcScoreboard extends HTMLElement {
         const link_css = document.createElement('link');
         link_css.setAttribute('rel', 'stylesheet');
         link_css.setAttribute('href', 'kit/lib/scoreboard/ac-scoreboard.css'); // TODO Remove before flight
-        //link_css.setAttribute('href', '$ac_scoreboard_location$/ac-scoreboard.css');
+        //link_css.setAttribute('href', '$var_ac_scoreboard_location$/ac-scoreboard.css');
         shadow.appendChild(link_css)
 
         // Setting up Card

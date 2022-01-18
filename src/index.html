@@ -10,39 +10,37 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.7.6/dist/css/uikit.min.css" />
 
     <!-- Site specific css -->
-    <link rel="stylesheet" href="kit/css/overview.css">
+    <link rel="stylesheet" href="kit/css/main.css">
 </head>
 
 <body onload="init();">
-    <div uk-sticky="sel-target: .uk-navbar-container;">
-        <nav class=" uk-navbar-container uk-navbar-transparent" uk-navbar>
-            <div class="uk-navbar-right uk-margin-right">
-                <ul class="uk-navbar-nav">
-                    <li>
-                        <a href="/about.html" uk-icon="icon: info"></a>
-                    </li>
-                </ul>
+    <div class="main">
+        <div uk-sticky="sel-target: .uk-navbar-container;">
+            <nav class=" uk-navbar-container uk-navbar-transparent" uk-navbar>
+                <div class="uk-navbar-right uk-margin-right">
+                    <ul class="uk-navbar-nav">
+                        <li>
+                            <a href="/about.html" uk-icon="icon: info"></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <div class="uk-container">
+            <div class="uk-margin-xlarge-bottom">
+                <div data-i18n="current-competitions" class="uk-heading-medium uk-text-normal"></div>
             </div>
-        </nav>
+
+            <div class="uk-card uk-card-default uk-card-small uk-card-body">
+                <ul id="comp_list" class="uk-list uk-list-divider uk-list-large"></ul>
+            </div>
+        </div>
     </div>
 
-    <div class="uk-container">
-
-        <div class="uk-margin-xlarge-bottom">
-            <div data-i18n="current-competitions" class="uk-heading-medium uk-text-normal"></div>
-        </div>
-
-        <div class="uk-card uk-card-default uk-card-small uk-card-body">
-            <ul id="comp_list" class="uk-list uk-list-divider uk-list-large"></ul>
-        </div>
-
-
-
-        <div class="uk-position-bottom-right uk-text-secondary">
-            <a href="/impressum.html" class="uk-text-secondary" data-i18n="imprint">Impressum</a> | © Andreas Steger,
-            2021 | <a href="https://github.com/AndSte01/art-cycle-liveticker-webpage">$git_version$</a>
-        </div>
-
+    <div class="footer">
+        <a href="/imprint.html" data-i18n="imprint">Imprint</a> | © Andreas Steger,
+        $var_current_year$ | <a href="https://github.com/AndSte01/art-cycle-liveticker-webpage">$var_git_version$</a>
     </div>
 
     <!-- UIkit JS -->
@@ -69,7 +67,7 @@
 
     <!-- Site specific scripts -->
     <script src="kit/js/i18n_init.js"></script>
-    <script src="kit/js/overview.js"></script>
+    <script src="kit/js/pages/overview.js"></script>
 </body>
 
 </html>
